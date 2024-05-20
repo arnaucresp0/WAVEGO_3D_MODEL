@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="assemblyURDF_sim_v3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000611071768748985 0.00203532044672235 0.0265273092708457"
+        rpy="0 0 0" />
+      <mass
+        value="0.382892713953797" />
+      <inertia
+        ixx="0.000156565489281089"
+        ixy="-1.32820000526297E-08"
+        ixz="7.17644779222563E-08"
+        iyy="0.00048093929718436"
+        iyz="2.35566435641254E-08"
+        izz="0.000561518702693004" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="servo_1_link">
+    <inertial>
+      <origin
+        xyz="0.015 -0.00663800305531337 -0.000639346575707883"
+        rpy="0 0 0" />
+      <mass
+        value="0.020715840734641" />
+      <inertia
+        ixx="2.6167090766202E-06"
+        ixy="-3.99388019611031E-22"
+        ixz="-1.93943886813963E-22"
+        iyy="2.36925699275785E-06"
+        iyz="6.93288358194387E-09"
+        izz="3.34552907980387E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="servo_1_joint"
+    type="continuous">
+    <origin
+      xyz="0.0492951218109149 -0.0235467065517865 0.024"
+      rpy="1.19325088290338 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="servo_1_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="leg_1_link">
+    <inertial>
+      <origin
+        xyz="-0.02 -6.78276879106932E-14 0.0153039721883448"
+        rpy="0 0 0" />
+      <mass
+        value="0.00226703537555513" />
+      <inertia
+        ixx="2.37183625868799E-08"
+        ixy="-1.32288017515401E-18"
+        ixz="8.31316515615793E-23"
+        iyy="4.13865846142266E-07"
+        iyz="-6.61744490042422E-24"
+        izz="4.28138227997666E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_2_joint"
+    type="continuous">
+    <origin
+      xyz="0.015 -0.013 -0.00280397218834483"
+      rpy="0 0 0.625000267634323" />
+    <parent
+      link="servo_1_link" />
+    <child
+      link="leg_1_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="foot_1_link">
+    <inertial>
+      <origin
+        xyz="0.0396009603573879 0.00562254465841069 -0.0302219540967466"
+        rpy="0 0 0" />
+      <mass
+        value="0.00466853888839397" />
+      <inertia
+        ixx="4.20913564361034E-07"
+        ixy="-7.492517540195E-07"
+        ixz="1.24410086133859E-08"
+        iyy="2.75704387624934E-06"
+        iyz="1.76637449933399E-09"
+        izz="3.15540588393019E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_1_joint"
+    type="continuous">
+    <origin
+      xyz="-0.04 0 -0.00998527475373712"
+      rpy="3.14159265358979 0 -1.04037357500652" />
+    <parent
+      link="leg_1_link" />
+    <child
+      link="foot_1_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="servo_2_link">
+    <inertial>
+      <origin
+        xyz="-0.015 -0.00663800305531345 -0.000639346575707883"
+        rpy="0 0 0" />
+      <mass
+        value="0.020715840734641" />
+      <inertia
+        ixx="2.6167090766202E-06"
+        ixy="2.97650390182204E-22"
+        ixz="-5.69866571425958E-23"
+        iyy="2.36925699275785E-06"
+        iyz="6.93288358194493E-09"
+        izz="3.34552907980387E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="servo_2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0507048781890851 -0.0235467065517864 0.024"
+      rpy="1.38644147063987 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="servo_2_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="leg_2_link">
+    <inertial>
+      <origin
+        xyz="-0.0199999999999991 -2.4980018054066E-16 0.00951738563424648"
+        rpy="0 0 0" />
+      <mass
+        value="0.00226703537555513" />
+      <inertia
+        ixx="2.37183625868801E-08"
+        ixy="2.24993126614424E-22"
+        ixz="-1.55923545466246E-22"
+        iyy="4.13865846142267E-07"
+        iyz="-1.32348898008484E-23"
+        izz="4.28138227997667E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.015 -0.013 0.00298261436575352"
+      rpy="0 0 0.671619943025242" />
+    <parent
+      link="servo_2_link" />
+    <child
+      link="leg_2_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="foot_2_link">
+    <inertial>
+      <origin
+        xyz="0.0396009603573874 0.00562254465841142 -0.0193641895132344"
+        rpy="0 0 0" />
+      <mass
+        value="0.00466853888839397" />
+      <inertia
+        ixx="4.20913564361033E-07"
+        ixy="-7.49251754019497E-07"
+        ixz="1.24410086133866E-08"
+        iyy="2.75704387624934E-06"
+        iyz="1.76637449933423E-09"
+        izz="3.15540588393019E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_2_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0399999999999991 0 -0.0049140967243233"
+      rpy="-3.14159265358979 0 -1.08209164870542" />
+    <parent
+      link="leg_2_link" />
+    <child
+      link="foot_2_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="servo_3_link">
+    <inertial>
+      <origin
+        xyz="0.015 -0.00663800305531345 -0.000639346575707883"
+        rpy="0 0 0" />
+      <mass
+        value="0.020715840734641" />
+      <inertia
+        ixx="2.61670907662019E-06"
+        ixy="1.27674811281399E-22"
+        ixz="9.63597929477141E-23"
+        iyy="2.36925699275785E-06"
+        iyz="6.9328835819444E-09"
+        izz="3.34552907980387E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="servo_3_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0507048781890851 0.0284532934482131 0.0240000000000004"
+      rpy="1.43932790895367 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="servo_3_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="leg_3_link">
+    <inertial>
+      <origin
+        xyz="0.02 0 0.00241407702081536"
+        rpy="0 0 0" />
+      <mass
+        value="0.00226703537555514" />
+      <inertia
+        ixx="2.37183625868801E-08"
+        ixy="-1.41447884746568E-22"
+        ixz="-4.508134338414E-23"
+        iyy="4.13865846142267E-07"
+        iyz="-1.32348898008484E-23"
+        izz="4.28138227997668E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_3_joint"
+    type="continuous">
+    <origin
+      xyz="0.0149999999999994 -0.0129999999999998 0.0100859229791846"
+      rpy="0 0 -0.524206506794894" />
+    <parent
+      link="servo_3_link" />
+    <child
+      link="leg_3_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="foot_3_link">
+    <inertial>
+      <origin
+        xyz="-0.0396009603573878 0.00562254465841165 -0.00734678417548039"
+        rpy="0 0 0" />
+      <mass
+        value="0.00466853888839397" />
+      <inertia
+        ixx="4.20913564361034E-07"
+        ixy="7.49251754019498E-07"
+        ixz="-1.24410086133875E-08"
+        iyy="2.75704387624934E-06"
+        iyz="1.76637449933447E-09"
+        izz="3.15540588393019E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_3_joint"
+    type="continuous">
+    <origin
+      xyz="0.04 0 0"
+      rpy="-3.14159265358979 0 1.07982204879055" />
+    <parent
+      link="leg_3_link" />
+    <child
+      link="foot_3_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="servo_4_link">
+    <inertial>
+      <origin
+        xyz="-0.015 -0.00663800305531342 -0.000639346575707883"
+        rpy="0 0 0" />
+      <mass
+        value="0.020715840734641" />
+      <inertia
+        ixx="2.6167090766202E-06"
+        ixy="-1.00112987012655E-22"
+        ixz="1.60304903991326E-22"
+        iyy="2.36925699275786E-06"
+        iyz="6.93288358194414E-09"
+        izz="3.34552907980387E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/servo_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="servo_4_joints"
+    type="continuous">
+    <origin
+      xyz="0.0492951218109149 0.0284532934482133 0.0239999999999998"
+      rpy="1.2521204794546 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="servo_4_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="leg_4_link">
+    <inertial>
+      <origin
+        xyz="0.02 0 0.00200918624785887"
+        rpy="0 0 0" />
+      <mass
+        value="0.00226703537555514" />
+      <inertia
+        ixx="2.37183625868801E-08"
+        ixy="5.70754622661589E-23"
+        ixz="1.62954580672946E-22"
+        iyy="4.13865846142267E-07"
+        iyz="-6.61744490042422E-24"
+        izz="4.28138227997667E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/leg_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_4_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0150000000000001 -0.013 0.0104908137521414"
+      rpy="0 0 -0.625428082238554" />
+    <parent
+      link="servo_4_link" />
+    <child
+      link="leg_4_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="foot_4_link">
+    <inertial>
+      <origin
+        xyz="-0.0396009603573879 0.00562254465841092 -0.00694189340252346"
+        rpy="0 0 0" />
+      <mass
+        value="0.00466853888839397" />
+      <inertia
+        ixx="4.20913564361033E-07"
+        ixy="7.49251754019498E-07"
+        ixz="-1.24410086133882E-08"
+        iyy="2.75704387624934E-06"
+        iyz="1.76637449933426E-09"
+        izz="3.15540588393019E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assemblyURDF_sim_v3/meshes/foot_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_4_joint"
+    type="continuous">
+    <origin
+      xyz="0.04 0 0"
+      rpy="-3.14159265358979 0 1.20568652407404" />
+    <parent
+      link="leg_4_link" />
+    <child
+      link="foot_4_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
